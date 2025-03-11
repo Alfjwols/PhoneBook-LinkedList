@@ -39,6 +39,8 @@ int main() {
 
 int UsePhoneBook(PhoneBook &PH){
 
+  cout << endl << endl;
+  
   PH.print();
   
   string fName,lName,number;

@@ -242,6 +242,7 @@ string PhoneBook::lookup(string firstName, string lastName){
     if ( (temp->first_name == firstName) && (temp->last_name == lastName) ){
       return temp->phone_number;
     }
+    temp = temp->next;
   }
 
   cout << "Could not find number for \"" << firstName << " " << lastName << "\"" << endl;	
@@ -255,6 +256,7 @@ string PhoneBook::reverse_lookup(string number){
     if( temp->phone_number == number ){
       return (temp->first_name + " " + temp->last_name);
     }
+    temp = temp->next;
   }
 
   cout << "failed to find contact with number: " << number << endl;
